@@ -1,0 +1,54 @@
+{
+  "name": "react-tw",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:tw": "tailwindcss build src/css/tailwind.css -c tailwind.config.js -o src/css/index.css",
+    "watch:tw": "tailwindcss build src/tailwind.css -c tailwind.config.js -o src/index.css --watch",
+    "prestart": "yarn build:tw",
+    "prebuild": "yarn build:tw",
+    "start": "BROWSER=NONE PORT=3333 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.8",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.11.11",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.4",
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.9.5",
+    "typescript": "~4.0.3"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
